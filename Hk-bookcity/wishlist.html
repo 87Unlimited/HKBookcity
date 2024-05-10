@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Categories</title>
+
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script src="https://kit.fontawesome.com/a3faa39bf0.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" language="javascript">
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="images\bookcity_logo.jpg" alt="" class="logo-img"></a>
+            <div class="search_box">
+                <input type="search" placeholder="Search here">
+                <a href="search.html"><span class="fa fa-search"></span></a>
+            </div>
+            <ul class="menu-links">
+                <span id="close-menu-btn" class="material-symbols-outlined"><i class="fa-solid fa-xmark"></i></span>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="categories.html">Category</a></li>
+                <li>
+                    <a href="#">English▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">中文(繁)</a></li>
+                        <li><a href="#">中文(簡)</a></li>
+                    </ul>
+                </li>
+                <li><a href="profile.html"><i class="fas fa-user-circle"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            </ul>
+            <span id="menu-btn" class="material-symbols-outlined"><i class="fa-solid fa-bars"></i></span>
+        </nav>
+    </header>
+
+    <section class="features">
+        <div class="shop-container">
+            <!-- Title -->
+            <h2 class="section-title">Wish List</h2>
+            <!-- Back to index -->
+            <a href="cart.html">
+                <h4 class="section-subtitle">Back to Cart</h4>
+            </a>
+            <div class="cart-content">
+                <div class="shopping-cart">
+                    <!-- Title -->
+                    <div class="title">
+                        Shopping Bag
+                    </div>
+
+                    <!-- Product #1 -->
+                    <div class="item">
+                        <div class="image">
+                            <img src="images\books\book1.jpg" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <span>深時遠見：時間感如何影響決策，人類如何擺脫短期主義的危局</span>
+                        </div>
+
+                        <div class="quantity">
+                            <button class="plus-btn" type="button" name="button">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <input type="text" name="name" value="1">
+                            <button class="minus-btn" type="button" name="button">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+
+                        <div class="total-price">$425</div>
+                    </div>
+
+                    <!-- Product #2 -->
+                    <div class="item">
+                        <div class="image">
+                            <img src="images\books\book2.jpg" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <span>褪黑激素</span>
+                        </div>
+
+                        <div class="quantity">
+                            <button class="plus-btn" type="button" name="button">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <input type="text" name="name" value="1">
+                            <button class="minus-btn" type="button" name="button">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+
+                        <div class="total-price">$320</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <img src="images\bookcity_logo.jpg" alt="" class="logo-img">
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">shipping address</a></li>
+                        <li><a href="#">profile</a></li>
+                        <li><a href="#">password</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+        menuBtn.addEventListener("click", () => {
+            header.classList.toggle("show-mobile-menu");
+        });
+
+        closeMenuBtn.addEventListener("click", () => {
+            menuBtn.click();
+        });
+    </script>
+</body>
+
+</html>
